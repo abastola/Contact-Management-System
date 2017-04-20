@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Home - Final Project - Web Apps</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="css/2-col-portfolio.css" rel="stylesheet">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="./index.html">Final Project</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li>
+                     <a href="./mailer.html">Mailer</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!-- Page Content -->
+      <div class="container-fluid">
+         <!-- Projects Row -->
+         <div class="row">
+            <div class="col-md-8">
+               <button type="button" class="btn btn-primary btn-lg btn-circle" data-toggle="modal" data-target="#addContact" id="fixedbutton"  data-hello="tooltip" title="Add New Contact">+</button>
+               <!-- Modal -->
+               <div class="modal fade" id="addContact" role="dialog">
+                  <div class="modal-dialog">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <h4 class="modal-title">Add Contact</h4>
+                        </div>
+                        <div class="modal-body" id="contact_form">
+                           <form id="formAdd" class="form-horizontal" method="post" action="http://localhost:3000/add">
+                              <div class="form-group" id="div_salutation">
+                                 <label class="control-label col-sm-4" for="salutation">
+                                 Salutation
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" value="Mr"/>
+                                    Mr
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" value="Mrs"/>
+                                    Mrs
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" value="Ms"/>
+                                    Ms
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" value="Dr"/>
+                                    Dr
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4 requiredField" for="firstname">
+                                 First Name
+                                 <span class="asteriskField">
+                                 *
+                                 </span>
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="firstname" name="firstname" type="text" required autofocus/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4 requiredField" for="lastname">
+                                 Last Name
+                                 <span class="asteriskField">
+                                 *
+                                 </span>
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="lastname" name="lastname" type="text" required/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="street">
+                                 Street
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="street" name="street" type="text"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="city">
+                                 City
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="city" name="city" type="text"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="state" class="col-sm-4 control-label">State</label>
+                                 <div class="col-sm-8">
+                                    <select class="form-control" id="state" name="state">
+                                       <option value="AK">Alaska</option>
+                                       <option value="AL">Alabama</option>
+                                       <option value="AR">Arkansas</option>
+                                       <option value="AZ">Arizona</option>
+                                       <option value="CA">California</option>
+                                       <option value="CO">Colorado</option>
+                                       <option value="CT">Connecticut</option>
+                                       <option value="DC">District of Columbia</option>
+                                       <option value="DE">Delaware</option>
+                                       <option value="FL">Florida</option>
+                                       <option value="GA">Georgia</option>
+                                       <option value="HI">Hawaii</option>
+                                       <option value="IA">Iowa</option>
+                                       <option value="ID">Idaho</option>
+                                       <option value="IL">Illinois</option>
+                                       <option value="IN">Indiana</option>
+                                       <option value="KS">Kansas</option>
+                                       <option value="KY">Kentucky</option>
+                                       <option value="LA">Louisiana</option>
+                                       <option value="MA">Massachusetts</option>
+                                       <option value="MD">Maryland</option>
+                                       <option value="ME">Maine</option>
+                                       <option value="MI">Michigan</option>
+                                       <option value="MN">Minnesota</option>
+                                       <option value="MO">Missouri</option>
+                                       <option value="MS">Mississippi</option>
+                                       <option value="MT">Montana</option>
+                                       <option value="NC">North Carolina</option>
+                                       <option value="ND">North Dakota</option>
+                                       <option value="NE">Nebraska</option>
+                                       <option value="NH">New Hampshire</option>
+                                       <option value="NJ">New Jersey</option>
+                                       <option value="NM">New Mexico</option>
+                                       <option value="NV">Nevada</option>
+                                       <option value="NY">New York</option>
+                                       <option value="OH">Ohio</option>
+                                       <option value="OK">Oklahoma</option>
+                                       <option value="OR">Oregon</option>
+                                       <option value="PA">Pennsylvania</option>
+                                       <option value="PR">Puerto Rico</option>
+                                       <option value="RI">Rhode Island</option>
+                                       <option value="SC">South Carolina</option>
+                                       <option value="SD">South Dakota</option>
+                                       <option value="TN">Tennessee</option>
+                                       <option value="TX">Texas</option>
+                                       <option value="UT">Utah</option>
+                                       <option value="VA">Virginia</option>
+                                       <option value="VT">Vermont</option>
+                                       <option value="WA">Washington</option>
+                                       <option value="WI">Wisconsin</option>
+                                       <option value="WV">West Virginia</option>
+                                       <option value="WY">Wyoming</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="zip">
+                                 Zip
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="zip" name="zip" placeholder="#####" type="number"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="phone">
+                                 Phone Number
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="phone" name="phone" placeholder="###-###-####" type="number"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="email">
+                                 Email
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="email" name="email" placeholder="name@domain.com" type="email"/>
+                                 </div>
+                              </div>
+                              <div class="form-group" id="div_checkbox">
+                                 <label class="control-label col-sm-4" for="checkbox">
+                                 How may be contact you?
+                                 </label>
+                                 <div class="col-sm-8 ">
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_phone" value="Phone"/>
+                                    Phone
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_mail" value="Mail"/>
+                                    Mail
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_email" value="Email"/>
+                                    Email
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <div class="col-sm-4 col-sm-offset-4">
+                                    <button class="btn btn-primary " id="addSubmit" type="submit">
+                                    Add
+                                    </button>
+                                    <button id="closeAddModal" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal fade" id="UpdateContact" role="dialog">
+                  <div class="modal-dialog">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <h4 class="modal-title">Update Contact</h4>
+                        </div>
+                        <div class="modal-body" id="contact_form">
+                           <form id="formUpdate" class="form-horizontal" method="post" action="http://localhost:3000/update">
+                              <div class="form-group" id="div_salutation">
+                                 <label class="control-label col-sm-4" for="salutation">
+                                 Salutation
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" id="Mr" value="Mr"/>
+                                    Mr
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" id="Mrs" type="radio" value="Mrs"/>
+                                    Mrs
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" id="Ms" value="Ms"/>
+                                   Ms
+                                    </label>
+                                    <label class="radio-inline">
+                                    <input name="salutation" type="radio" id="Dr" value="Dr"/>
+                                    Dr
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4 requiredField" for="firstname">
+                                 First Name
+                                 <span class="asteriskField">
+                                 *
+                                 </span>
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="firstname2" name="firstname" type="text" required autofocus/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="oid2" name="oid" type="text" />
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4 requiredField" for="lastname">
+                                 Last Name
+                                 <span class="asteriskField">
+                                 *
+                                 </span>
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="lastname2" name="lastname" type="text" required/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="street">
+                                 Street
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="street2" name="street" type="text"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="city">
+                                 City
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="city2" name="city" type="text"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="state" class="col-sm-4 control-label">State</label>
+                                 <div class="col-sm-8">
+                                    <select class="form-control" id="state2" name="state">
+                                       <option value="AK">Alaska</option>
+                                       <option value="AL">Alabama</option>
+                                       <option value="AR">Arkansas</option>
+                                       <option value="AZ">Arizona</option>
+                                       <option value="CA">California</option>
+                                       <option value="CO">Colorado</option>
+                                       <option value="CT">Connecticut</option>
+                                       <option value="DC">District of Columbia</option>
+                                       <option value="DE">Delaware</option>
+                                       <option value="FL">Florida</option>
+                                       <option value="GA">Georgia</option>
+                                       <option value="HI">Hawaii</option>
+                                       <option value="IA">Iowa</option>
+                                       <option value="ID">Idaho</option>
+                                       <option value="IL">Illinois</option>
+                                       <option value="IN">Indiana</option>
+                                       <option value="KS">Kansas</option>
+                                       <option value="KY">Kentucky</option>
+                                       <option value="LA">Louisiana</option>
+                                       <option value="MA">Massachusetts</option>
+                                       <option value="MD">Maryland</option>
+                                       <option value="ME">Maine</option>
+                                       <option value="MI">Michigan</option>
+                                       <option value="MN">Minnesota</option>
+                                       <option value="MO">Missouri</option>
+                                       <option value="MS">Mississippi</option>
+                                       <option value="MT">Montana</option>
+                                       <option value="NC">North Carolina</option>
+                                       <option value="ND">North Dakota</option>
+                                       <option value="NE">Nebraska</option>
+                                       <option value="NH">New Hampshire</option>
+                                       <option value="NJ">New Jersey</option>
+                                       <option value="NM">New Mexico</option>
+                                       <option value="NV">Nevada</option>
+                                       <option value="NY">New York</option>
+                                       <option value="OH">Ohio</option>
+                                       <option value="OK">Oklahoma</option>
+                                       <option value="OR">Oregon</option>
+                                       <option value="PA">Pennsylvania</option>
+                                       <option value="PR">Puerto Rico</option>
+                                       <option value="RI">Rhode Island</option>
+                                       <option value="SC">South Carolina</option>
+                                       <option value="SD">South Dakota</option>
+                                       <option value="TN">Tennessee</option>
+                                       <option value="TX">Texas</option>
+                                       <option value="UT">Utah</option>
+                                       <option value="VA">Virginia</option>
+                                       <option value="VT">Vermont</option>
+                                       <option value="WA">Washington</option>
+                                       <option value="WI">Wisconsin</option>
+                                       <option value="WV">West Virginia</option>
+                                       <option value="WY">Wyoming</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="zip">
+                                 Zip
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="zip2" name="zip" placeholder="#####" type="number"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="phone">
+                                 Phone Number
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="phone2" name="phone" placeholder="###-###-####" type="number"/>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="control-label col-sm-4" for="email">
+                                 Email
+                                 </label>
+                                 <div class="col-sm-8">
+                                    <input class="form-control" id="email2" name="email" placeholder="name@domain.com" type="email"/>
+                                 </div>
+                              </div>
+                              <div class="form-group" id="div_checkbox">
+                                 <label class="control-label col-sm-4" for="checkbox">
+                                 How may be contact you?
+                                 </label>
+                                 <div class="col-sm-8 ">
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_phone2" value="Phone"/>
+                                    Phone
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_mail2" value="Mail"/>
+                                    Mail
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input name="checkbox" type="checkbox" id="checkbox_email2" value="Email"/>
+                                    Email
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <div class="col-sm-4 col-sm-offset-4">
+                                    <button class="btn btn-primary " id="updateSubmit" type="submit">
+                                    Update
+                                    </button>
+                                    <button id="closeUpdateModal" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <form class="form-inline">
+                     <div class="form-group">
+                        <label for="fname">Filter: &nbsp;</label>
+                        <input type="text" class="form-control" id="fname" placeholder=" First Name" onkeyup="myFunction()">
+                     </div>
+                     <div class="form-group">
+                        <label for="lname">&nbsp;</label>
+                        <input type="text" class="form-control" id="lname" placeholder="Last Name" onkeyup="myFunction()">
+                     </div>
+                  </form>
+               </div>
+               <table class="table table-responsive table-striped" id="myTable">
+                  <thead>
+                     <tr>
+                        <th>Title</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Contact By</th>
+                        <th></th>
+                        <th></th>
+                        <th style="display:none"></th>
+                        <th style="display:none"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col-md-4" id="myMap">
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-lg-12 footer">
+               <p>Final Exam | Web Application | CMPS 369</p>
+            </div>
+         </div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer></script>
+      <script src="js/client.js"></script>
+      <script src="js/json2html.js"></script>
+      <script src="js/jquery.json2html.js"></script>
+   </body>
+</html>

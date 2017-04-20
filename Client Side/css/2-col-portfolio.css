@@ -1,0 +1,66 @@
+/*!
+ * Start Bootstrap - 2 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+ 	padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+ 	opacity: 1; 
+ 	background-color: rgb(255, 255, 255); 
+ 	
+ }
+
+ .portfolio-item {
+ 	margin-bottom: 25px;
+ }
+
+ .footer {
+ 	margin: 5px 0;
+ 	text-align: center;
+ }
+
+ .columnContainer{
+ 	background-color: lightblue;
+ }
+
+ #myMap{
+ 	height: 750px;
+ 	float: left;
+ 	width: 600px;  
+ }
+
+ .imgIcon{
+ 	height: 25px;
+ 	width: 25px;
+ }
+
+ @media (min-width: 1200px) {
+ 	.container {
+ 		width: 1600px;
+ 	}
+ }
+
+ #fixedbutton {
+ 	position: fixed;
+ 	bottom: 20px;
+ 	left: 20px; 
+ }
+
+ .contactTable{
+ 	height: 750px;
+ 	overflow: scroll;
+ }
+
+ .btn-circle {
+ 	width: 80px;
+ 	height: 80px;
+ 	line-height: 40px; /* adjust line height to align vertically*/
+ 	padding:0px;
+ 	border-radius: 50%;
+ 	font-size: 50px;
+ }
+
+ .btn-circle:hover{
+ 	background-color: green;
+ }
