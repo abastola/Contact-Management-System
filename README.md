@@ -1,10 +1,10 @@
 # Contact Management System
 
-Secure contact data management system with geolocation
+Secure contact data management system with geolocation.
 
-# Tools Used
+## Tools Used
 
-* Node.JS 
+* NodeJS 
 * MongoDB 
 * jQuery
 * Bootstrap
